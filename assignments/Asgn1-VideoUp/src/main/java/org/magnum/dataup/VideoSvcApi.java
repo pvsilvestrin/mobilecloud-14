@@ -58,7 +58,7 @@ import retrofit.http.Streaming;
 import retrofit.mime.TypedFile;
 
 /**
- * This interface defines an API for a VideoSvc. The
+ * This interface defines an API for a VideoSvcController. The
  * interface is used to provide a contract for client/server
  * interactions. The interface is annotated with Retrofit
  * annotations so that clients can automatically convert the
