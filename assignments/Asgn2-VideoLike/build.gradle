@@ -20,6 +20,14 @@ apply plugin: 'war'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/test/java']
+        }
+    }
+}
+
 war {
     baseName = 'gs-convert-jar-to-war'
     version =  '0.1.0'
