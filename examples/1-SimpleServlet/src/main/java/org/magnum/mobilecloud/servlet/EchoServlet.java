@@ -41,7 +41,7 @@ public class EchoServlet extends HttpServlet // Servlets should inherit from Htt
 		// http://foo.bar?msg=asdf
 		
 		// Echo a response back to the client with the msg that was sent
-		resp.getWriter().write("Echo:"+ msg);
+		resp.getWriter().write("EchoTeste:"+ msg);
 	}
 
 	/*

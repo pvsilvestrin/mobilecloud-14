@@ -2,7 +2,7 @@ package org.magnum.mobilecloud.video.client;
 
 import java.util.Collection;
 
-import org.magnum.mobilecloud.video.repository.Video;
+import org.magnum.mobilecloud.video.model.Video;
 
 import retrofit.http.Body;
 import retrofit.http.GET;

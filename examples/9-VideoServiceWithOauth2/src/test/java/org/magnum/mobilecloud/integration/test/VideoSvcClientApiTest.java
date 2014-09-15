@@ -12,7 +12,7 @@ import org.magnum.mobilecloud.video.TestData;
 import org.magnum.mobilecloud.video.client.SecuredRestBuilder;
 import org.magnum.mobilecloud.video.client.SecuredRestException;
 import org.magnum.mobilecloud.video.client.VideoSvcApi;
-import org.magnum.mobilecloud.video.repository.Video;
+import org.magnum.mobilecloud.video.model.Video;
 
 import retrofit.RestAdapter.LogLevel;
 import retrofit.RetrofitError;
@@ -62,7 +62,7 @@ public class VideoSvcClientApiTest {
 
 	private VideoSvcApi readOnlyVideoService = new SecuredRestBuilder()
 			.setLoginEndpoint(TEST_URL + VideoSvcApi.TOKEN_PATH)
-			.setUsername(USERNAME)
+			.setUsername("user5")
 			.setPassword(PASSWORD)
 			.setClientId(READ_ONLY_CLIENT_ID)
 			.setClient(new ApacheClient(UnsafeHttpsClient.createUnsafeClient()))

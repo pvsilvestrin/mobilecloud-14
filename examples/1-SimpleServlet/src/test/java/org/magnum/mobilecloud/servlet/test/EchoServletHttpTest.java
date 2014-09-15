@@ -47,7 +47,7 @@ public class EchoServletHttpTest {
 		
 		// Ensure that the body of the HTTP response met our
 		// expectations (e.g., it was "Echo:" + msg)
-		assertEquals("Echo:"+msg, content);
+		assertEquals("EchoTeste:"+msg, content);
 	}
 
 }

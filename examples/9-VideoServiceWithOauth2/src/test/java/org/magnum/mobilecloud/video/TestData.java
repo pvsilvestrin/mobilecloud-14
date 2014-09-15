@@ -2,7 +2,7 @@ package org.magnum.mobilecloud.video;
 
 import java.util.UUID;
 
-import org.magnum.mobilecloud.video.repository.Video;
+import org.magnum.mobilecloud.video.model.Video;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

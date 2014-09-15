@@ -3,6 +3,7 @@ package org.magnum.mobilecloud.video.repository;
 import java.util.Collection;
 
 import org.magnum.mobilecloud.video.client.VideoSvcApi;
+import org.magnum.mobilecloud.video.model.Video;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
