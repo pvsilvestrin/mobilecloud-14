@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.magnum.mobilecloud.video.client.VideoSvcApi;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
@@ -28,7 +29,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 //
 @EnableScan
 @RepositoryRestResource(path = VideoSvcApi.VIDEO_SVC_PATH)
-public interface VideoRepository extends CrudRepository<Video, Long>{
+public interface VideoRepository extends CrudRepository<Video, Long> {
 
 	// Find all videos with a matching title (e.g., Video.name)
 	public Collection<Video> findByName(

@@ -1,5 +1,7 @@
 package org.magnum.mobilecloud.video;
 
+import com.amazonaws.regions.Region;
+import com.amazonaws.regions.Regions;
 import org.magnum.mobilecloud.video.json.ResourcesMapper;
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;
@@ -56,16 +58,17 @@ public class Application extends RepositoryRestMvcConfiguration {
 		return new ResourcesMapper();
 	}
 	
-    @Value("${amazon.aws.accesskey}")
-    private String amazonAWSAccessKey;
+    //@Value("${amazon.aws.accesskey}")
+    private String amazonAWSAccessKey = "AKIAJWZYIGGBL66Z5JFA";
 
-    @Value("${amazon.aws.secretkey}")
-    private String amazonAWSSecretKey;
+    //@Value("${amazon.aws.secretkey}")
+    private String amazonAWSSecretKey = "AYFD+2o5me1NnIKoMuOE5gSZZqi0rOxECQ8PWuYb";
 
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
         AmazonDynamoDB amazonDynamoDB = new AmazonDynamoDBClient(
                 amazonAWSCredentials());
+        amazonDynamoDB.setRegion(Region.getRegion(Regions.US_WEST_2));
         return amazonDynamoDB;
     }
 
