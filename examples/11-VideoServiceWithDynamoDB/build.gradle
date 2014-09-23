@@ -17,14 +17,16 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
 
+applicationDefaultJvmArgs = ["-DAWS_SECRET_KEY=AYFD+2o5me1NnIKoMuOE5gSZZqi0rOxECQ8PWuYb", "-DAWS_ACCESS_KEY_ID=AKIAJWZYIGGBL66Z5JFA"]
+
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 
 war {
-    baseName = 'gs-convert-jar-to-war'
-    version =  '0.1.0'
+    baseName = 'videosvc-amazon-beanstalk'
+    version =  '0.1.1'
 }
 
 repositories {
@@ -36,10 +38,8 @@ repositories {
 
 dependencies {
 
-    compile("org.springframework.boot:spring-boot-starter-web") {
-        exclude module: "spring-boot-starter-tomcat"
-    }
-    providedRuntime("org.springframework.boot:spring-boot-starter-jetty")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 
     compile("org.springframework.data:spring-data-commons:1.8.0.RELEASE")
 

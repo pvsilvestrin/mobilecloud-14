@@ -57,12 +57,12 @@ public class Application extends RepositoryRestMvcConfiguration {
 	public ObjectMapper halObjectMapper(){
 		return new ResourcesMapper();
 	}
-	
-    //@Value("${amazon.aws.accesskey}")
-    private String amazonAWSAccessKey = "AKIAJWZYIGGBL66Z5JFA";
 
-    //@Value("${amazon.aws.secretkey}")
-    private String amazonAWSSecretKey = "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";
+    @Value("${AWS_ACCESS_KEY_ID}")
+    private String amazonAWSAccessKey;
+
+    @Value("${AWS_SECRET_KEY}")
+    private String amazonAWSSecretKey;
 
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
